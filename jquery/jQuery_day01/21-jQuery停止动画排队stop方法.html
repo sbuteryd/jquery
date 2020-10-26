@@ -65,7 +65,6 @@
     </style>
     <script src="jquery.min.js"></script>
 </head>
-
 <body>
     <ul class="nav">
         <li>
@@ -126,6 +125,11 @@
         </li>
     </ul>
     <script>
+        $(function(){
+            $('.nav li').hover(function(){
+                $(this).find('ul').stop().slideToggle()
+            })
+        })
         $(function() {
             // 鼠标经过
             // $(".nav>li").mouseover(function() {
@@ -144,10 +148,10 @@
             //     $(this).children("ul").slideUp(200);
             // });
             // 2. 事件切换 hover  如果只写一个函数，那么鼠标经过和鼠标离开都会触发这个函数
-            $(".nav>li").hover(function() {
-                // stop 方法必须写到动画的前面
-                $(this).children("ul").stop().slideToggle();
-            });
+            // $(".nav>li").hover(function() {
+            //     // stop 方法必须写到动画的前面
+            //     $(this).children("ul").stop().slideToggle();
+            // });
         })
     </script>
 </body>

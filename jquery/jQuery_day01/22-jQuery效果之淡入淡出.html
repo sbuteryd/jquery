@@ -51,22 +51,16 @@
     <script>
         $(function(){
             $('button').eq(0).click(function(){
-                $('div').fadeIn(1000)
+                $('div').fadeIn().fadeTo(1000,0.3)
             })
+
             $('button').eq(1).click(function(){
-                $('div').fadeOut(1000)
+                $('div').fadeOut()
             })
             $('button').eq(2).click(function(){
-                $('div').fadeToggle(1000)
+                $('div').fadeToggle()
             })
-            $("button").eq(3).click(function() {
-                //  修改透明度 fadeTo() 这个速度和透明度要必须写
-                $("div").fadeTo(1000, 0.5);
-
-            });
-
-            
-
+ 
         })
     </script>
 </body>
